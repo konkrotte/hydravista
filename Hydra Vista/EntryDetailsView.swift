@@ -47,28 +47,6 @@ struct LikeDislikeRatingButton: View {
     }
 }
 
-typealias TagServiceExpansionStates = [String: Bool]
-
-extension TagServiceExpansionStates: RawRepresentable {
-    public init?(rawValue: String) {
-        guard let data = rawValue.data(using: .utf8),
-            let result = try? JSONDecoder().decode(TagServiceExpansionStates.self, from: data)
-        else {
-            return nil
-        }
-        self = result
-    }
-
-    public var rawValue: String {
-        guard let data = try? JSONEncoder().encode(self),
-            let result = String(data: data, encoding: .utf8)
-        else {
-            return "[]"
-        }
-        return result
-    }
-}
-
 // TODO: Edit tags
 private struct InspectorView: View {
     @ObservedObject var entryVM: EntriesViewModel
@@ -76,8 +54,7 @@ private struct InspectorView: View {
     @SceneStorage("isRatingExpanded") var isRatingExpanded = true
     @SceneStorage("isKnownUrlsExpanded") var isKnownUrlsExpanded = true
     @SceneStorage("isAllKnownTagsExpanded") var isAllKnownTagsExpanded = true
-    
-    @SceneStorage("tagServiceExpansionStates") var tagServiceExpansionStates: TagServiceExpansionStates = [:]
+
     @Binding var pageIndex: Int
     
     private func boolToYesNo(val: Bool) -> String {
