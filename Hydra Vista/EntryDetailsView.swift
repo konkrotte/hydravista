@@ -68,7 +68,7 @@ private struct InspectorView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            LazyVStack {
                 let entry = entryVM.entries.values[pageIndex]
                 DisclosureGroup(isExpanded: $isRatingExpanded, content: {
                     ForEach(Array(entry.metadata.ratings.keys), id: \.self) { key in
@@ -124,7 +124,7 @@ private struct InspectorView: View {
                 }
                 
                 if let allKnownTagsService = entryVM.services.first(where: { $0.value.type == .AllKnownTags }) {
-                    TagSectionView(entryVM: entryVM, expanded: true /*$isAllKnownTagsExpanded*/, tags: entry.metadata.tags[allKnownTagsService.key]!.displayTags["0"]!, service: allKnownTagsService.value.name)
+                    TagSectionView(entryVM: entryVM, tags: entry.metadata.tags[allKnownTagsService.key]!.displayTags["0"]!, service: allKnownTagsService.value.name)
                         .id(UUID())
                         .padding(.horizontal, 10)
                 }

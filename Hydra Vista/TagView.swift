@@ -26,7 +26,7 @@ struct TagView: View {
 
 struct TagSectionView: View {
     @ObservedObject var entryVM: EntriesViewModel
-    @State var expanded: Bool
+    @State var expanded: Bool = true
     @State var tags: [String]
     @State var service: String
 
