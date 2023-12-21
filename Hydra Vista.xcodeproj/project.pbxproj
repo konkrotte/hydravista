@@ -11,7 +11,6 @@
 		F51259E82B20BE69003F7EEC /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = F51259E72B20BE69003F7EEC /* DequeModule */; };
 		F51259EA2B20BE69003F7EEC /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = F51259E92B20BE69003F7EEC /* OrderedCollections */; };
 		F51259ED2B21328E003F7EEC /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = F51259EC2B21328E003F7EEC /* SwiftUIX */; };
-		F51259F02B213DB8003F7EEC /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = F51259EF2B213DB8003F7EEC /* SwiftUIPager */; };
 		F51BC83F2B274DCE00B07D92 /* EntryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51BC83E2B274DCE00B07D92 /* EntryImageView.swift */; };
 		F51BC8412B277DFB00B07D92 /* EntryVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51BC8402B277DFB00B07D92 /* EntryVideoView.swift */; };
 		F533D2B52B2B01F400834D57 /* HydrusDataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533D2B42B2B01F400834D57 /* HydrusDataStructures.swift */; };
@@ -34,6 +33,7 @@
 		F5B89C922B1E070D0008E28F /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = F5B89C912B1E070D0008E28F /* NukeUI */; };
 		F5B89C942B1E070D0008E28F /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = F5B89C932B1E070D0008E28F /* NukeVideo */; };
 		F5B89C992B1F31120008E28F /* EntryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B89C982B1F31120008E28F /* EntryDetailsView.swift */; };
+		F5F40A4F2B34EFF100C156D3 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = F5F40A4E2B34EFF100C156D3 /* SwiftUIPager */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +66,7 @@
 			files = (
 				F51259ED2B21328E003F7EEC /* SwiftUIX in Frameworks */,
 				F51259E62B20BE69003F7EEC /* Collections in Frameworks */,
-				F51259F02B213DB8003F7EEC /* SwiftUIPager in Frameworks */,
+				F5F40A4F2B34EFF100C156D3 /* SwiftUIPager in Frameworks */,
 				F5B89C922B1E070D0008E28F /* NukeUI in Frameworks */,
 				F5B89C8E2B1E070D0008E28F /* Nuke in Frameworks */,
 				F51259E82B20BE69003F7EEC /* DequeModule in Frameworks */,
@@ -163,8 +163,8 @@
 				F51259E72B20BE69003F7EEC /* DequeModule */,
 				F51259E92B20BE69003F7EEC /* OrderedCollections */,
 				F51259EC2B21328E003F7EEC /* SwiftUIX */,
-				F51259EF2B213DB8003F7EEC /* SwiftUIPager */,
 				F5AE4ACE2B237A9800601AA5 /* UnifiedBlurHash */,
+				F5F40A4E2B34EFF100C156D3 /* SwiftUIPager */,
 			);
 			productName = "Hydrus Client";
 			productReference = F5B89C6A2B1DD6C20008E28F /* Hydra Vista.app */;
@@ -200,8 +200,8 @@
 				F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */,
 				F51259E42B20BE69003F7EEC /* XCRemoteSwiftPackageReference "swift-collections" */,
 				F51259EB2B21328D003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIX" */,
-				F51259EE2B213DB8003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
 				F5AE4ACD2B237A9800601AA5 /* XCRemoteSwiftPackageReference "UnifiedBlurHash" */,
+				F5F40A4D2B34EFF100C156D3 /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
 			);
 			productRefGroup = F5B89C6B2B1DD6C20008E28F /* Products */;
 			projectDirPath = "";
@@ -493,14 +493,6 @@
 				minimumVersion = 0.1.9;
 			};
 		};
-		F51259EE2B213DB8003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/fermoya/SwiftUIPager#installation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.0;
-			};
-		};
 		F5AE4ACD2B237A9800601AA5 /* XCRemoteSwiftPackageReference "UnifiedBlurHash" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/iankoex/UnifiedBlurHash";
@@ -515,6 +507,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 12.2.0;
+			};
+		};
+		F5F40A4D2B34EFF100C156D3 /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -540,11 +540,6 @@
 			package = F51259EB2B21328D003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
 		};
-		F51259EF2B213DB8003F7EEC /* SwiftUIPager */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F51259EE2B213DB8003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
-			productName = SwiftUIPager;
-		};
 		F5AE4ACE2B237A9800601AA5 /* UnifiedBlurHash */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F5AE4ACD2B237A9800601AA5 /* XCRemoteSwiftPackageReference "UnifiedBlurHash" */;
@@ -569,6 +564,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeVideo;
+		};
+		F5F40A4E2B34EFF100C156D3 /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5F40A4D2B34EFF100C156D3 /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
