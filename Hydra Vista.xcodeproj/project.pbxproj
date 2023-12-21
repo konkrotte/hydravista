@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F51259E62B20BE69003F7EEC /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = F51259E52B20BE69003F7EEC /* Collections */; };
+		F51259E82B20BE69003F7EEC /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = F51259E72B20BE69003F7EEC /* DequeModule */; };
+		F51259EA2B20BE69003F7EEC /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = F51259E92B20BE69003F7EEC /* OrderedCollections */; };
+		F51259ED2B21328E003F7EEC /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = F51259EC2B21328E003F7EEC /* SwiftUIX */; };
+		F51259F02B213DB8003F7EEC /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = F51259EF2B213DB8003F7EEC /* SwiftUIPager */; };
+		F51BC83F2B274DCE00B07D92 /* EntryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51BC83E2B274DCE00B07D92 /* EntryImageView.swift */; };
+		F51BC8412B277DFB00B07D92 /* EntryVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51BC8402B277DFB00B07D92 /* EntryVideoView.swift */; };
+		F533D2B52B2B01F400834D57 /* HydrusDataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533D2B42B2B01F400834D57 /* HydrusDataStructures.swift */; };
+		F5AE4ACF2B237A9800601AA5 /* UnifiedBlurHash in Frameworks */ = {isa = PBXBuildFile; productRef = F5AE4ACE2B237A9800601AA5 /* UnifiedBlurHash */; };
+		F5B0E8792B241E6E00FF39A9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0E8782B241E6E00FF39A9 /* SettingsView.swift */; };
+		F5B0E87B2B241EB300FF39A9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0E87A2B241EB300FF39A9 /* Utils.swift */; };
+		F5B0E87D2B241F4A00FF39A9 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0E87C2B241F4A00FF39A9 /* Entry.swift */; };
+		F5B0E87F2B24203500FF39A9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0E87E2B24203500FF39A9 /* SearchView.swift */; };
+		F5B0E8812B24205900FF39A9 /* Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0E8802B24205900FF39A9 /* Autocomplete.swift */; };
+		F5B0E8832B24218B00FF39A9 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0E8822B24218B00FF39A9 /* TagView.swift */; };
+		F5B89C6E2B1DD6C20008E28F /* Hydrus_ClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B89C6D2B1DD6C20008E28F /* Hydrus_ClientApp.swift */; };
+		F5B89C702B1DD6C20008E28F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B89C6F2B1DD6C20008E28F /* ContentView.swift */; };
+		F5B89C722B1DD6C40008E28F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B89C712B1DD6C40008E28F /* Assets.xcassets */; };
+		F5B89C762B1DD6C40008E28F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B89C752B1DD6C40008E28F /* Preview Assets.xcassets */; };
+		F5B89C852B1DDEAA0008E28F /* HydrusApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B89C842B1DDEAA0008E28F /* HydrusApi.swift */; };
+		F5B89C872B1DE3AF0008E28F /* EntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B89C862B1DE3AF0008E28F /* EntriesViewModel.swift */; };
+		F5B89C8B2B1DE8E10008E28F /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B89C8A2B1DE8E10008E28F /* EntryView.swift */; };
+		F5B89C8E2B1E070D0008E28F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = F5B89C8D2B1E070D0008E28F /* Nuke */; };
+		F5B89C902B1E070D0008E28F /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = F5B89C8F2B1E070D0008E28F /* NukeExtensions */; };
+		F5B89C922B1E070D0008E28F /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = F5B89C912B1E070D0008E28F /* NukeUI */; };
+		F5B89C942B1E070D0008E28F /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = F5B89C932B1E070D0008E28F /* NukeVideo */; };
+		F5B89C992B1F31120008E28F /* EntryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B89C982B1F31120008E28F /* EntryDetailsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F51BC83A2B2716EF00B07D92 /* Hydra-Vista-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hydra-Vista-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F51BC83E2B274DCE00B07D92 /* EntryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryImageView.swift; sourceTree = "<group>"; };
+		F51BC8402B277DFB00B07D92 /* EntryVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryVideoView.swift; sourceTree = "<group>"; };
+		F533D2B42B2B01F400834D57 /* HydrusDataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrusDataStructures.swift; sourceTree = "<group>"; };
+		F5B0E8782B241E6E00FF39A9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F5B0E87A2B241EB300FF39A9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F5B0E87C2B241F4A00FF39A9 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		F5B0E87E2B24203500FF39A9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F5B0E8802B24205900FF39A9 /* Autocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autocomplete.swift; sourceTree = "<group>"; };
+		F5B0E8822B24218B00FF39A9 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		F5B89C6A2B1DD6C20008E28F /* Hydra Vista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hydra Vista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B89C6D2B1DD6C20008E28F /* Hydrus_ClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydrus_ClientApp.swift; sourceTree = "<group>"; };
+		F5B89C6F2B1DD6C20008E28F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5B89C712B1DD6C40008E28F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5B89C732B1DD6C40008E28F /* Hydra_Vista.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hydra_Vista.entitlements; sourceTree = "<group>"; };
+		F5B89C752B1DD6C40008E28F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5B89C842B1DDEAA0008E28F /* HydrusApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrusApi.swift; sourceTree = "<group>"; };
+		F5B89C862B1DE3AF0008E28F /* EntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesViewModel.swift; sourceTree = "<group>"; };
+		F5B89C8A2B1DE8E10008E28F /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		F5B89C982B1F31120008E28F /* EntryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5B89C672B1DD6C20008E28F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F51259ED2B21328E003F7EEC /* SwiftUIX in Frameworks */,
+				F51259E62B20BE69003F7EEC /* Collections in Frameworks */,
+				F51259F02B213DB8003F7EEC /* SwiftUIPager in Frameworks */,
+				F5B89C922B1E070D0008E28F /* NukeUI in Frameworks */,
+				F5B89C8E2B1E070D0008E28F /* Nuke in Frameworks */,
+				F51259E82B20BE69003F7EEC /* DequeModule in Frameworks */,
+				F5B89C902B1E070D0008E28F /* NukeExtensions in Frameworks */,
+				F51259EA2B20BE69003F7EEC /* OrderedCollections in Frameworks */,
+				F5AE4ACF2B237A9800601AA5 /* UnifiedBlurHash in Frameworks */,
+				F5B89C942B1E070D0008E28F /* NukeVideo in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F55888B42B22A7B30050190B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5B89C612B1DD6C20008E28F = {
+			isa = PBXGroup;
+			children = (
+				F5B89C6C2B1DD6C20008E28F /* Hydra Vista */,
+				F5B89C6B2B1DD6C20008E28F /* Products */,
+				F55888B42B22A7B30050190B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5B89C6B2B1DD6C20008E28F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5B89C6A2B1DD6C20008E28F /* Hydra Vista.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5B89C6C2B1DD6C20008E28F /* Hydra Vista */ = {
+			isa = PBXGroup;
+			children = (
+				F51BC83A2B2716EF00B07D92 /* Hydra-Vista-Info.plist */,
+				F5B89C842B1DDEAA0008E28F /* HydrusApi.swift */,
+				F533D2B42B2B01F400834D57 /* HydrusDataStructures.swift */,
+				F5B89C6D2B1DD6C20008E28F /* Hydrus_ClientApp.swift */,
+				F5B89C6F2B1DD6C20008E28F /* ContentView.swift */,
+				F5B89C8A2B1DE8E10008E28F /* EntryView.swift */,
+				F5B89C982B1F31120008E28F /* EntryDetailsView.swift */,
+				F51BC83E2B274DCE00B07D92 /* EntryImageView.swift */,
+				F51BC8402B277DFB00B07D92 /* EntryVideoView.swift */,
+				F5B89C862B1DE3AF0008E28F /* EntriesViewModel.swift */,
+				F5B0E8802B24205900FF39A9 /* Autocomplete.swift */,
+				F5B0E87C2B241F4A00FF39A9 /* Entry.swift */,
+				F5B0E87A2B241EB300FF39A9 /* Utils.swift */,
+				F5B0E8782B241E6E00FF39A9 /* SettingsView.swift */,
+				F5B0E8822B24218B00FF39A9 /* TagView.swift */,
+				F5B0E87E2B24203500FF39A9 /* SearchView.swift */,
+				F5B89C712B1DD6C40008E28F /* Assets.xcassets */,
+				F5B89C732B1DD6C40008E28F /* Hydra_Vista.entitlements */,
+				F5B89C742B1DD6C40008E28F /* Preview Content */,
+			);
+			path = "Hydra Vista";
+			sourceTree = "<group>";
+		};
+		F5B89C742B1DD6C40008E28F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F5B89C752B1DD6C40008E28F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5B89C692B1DD6C20008E28F /* Hydra Vista */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B89C792B1DD6C40008E28F /* Build configuration list for PBXNativeTarget "Hydra Vista" */;
+			buildPhases = (
+				F5B89C662B1DD6C20008E28F /* Sources */,
+				F5B89C672B1DD6C20008E28F /* Frameworks */,
+				F5B89C682B1DD6C20008E28F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hydra Vista";
+			packageProductDependencies = (
+				F5B89C8D2B1E070D0008E28F /* Nuke */,
+				F5B89C8F2B1E070D0008E28F /* NukeExtensions */,
+				F5B89C912B1E070D0008E28F /* NukeUI */,
+				F5B89C932B1E070D0008E28F /* NukeVideo */,
+				F51259E52B20BE69003F7EEC /* Collections */,
+				F51259E72B20BE69003F7EEC /* DequeModule */,
+				F51259E92B20BE69003F7EEC /* OrderedCollections */,
+				F51259EC2B21328E003F7EEC /* SwiftUIX */,
+				F51259EF2B213DB8003F7EEC /* SwiftUIPager */,
+				F5AE4ACE2B237A9800601AA5 /* UnifiedBlurHash */,
+			);
+			productName = "Hydrus Client";
+			productReference = F5B89C6A2B1DD6C20008E28F /* Hydra Vista.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5B89C622B1DD6C20008E28F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F5B89C692B1DD6C20008E28F = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = F5B89C652B1DD6C20008E28F /* Build configuration list for PBXProject "Hydra Vista" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				nb,
+			);
+			mainGroup = F5B89C612B1DD6C20008E28F;
+			packageReferences = (
+				F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */,
+				F51259E42B20BE69003F7EEC /* XCRemoteSwiftPackageReference "swift-collections" */,
+				F51259EB2B21328D003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				F51259EE2B213DB8003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+				F5AE4ACD2B237A9800601AA5 /* XCRemoteSwiftPackageReference "UnifiedBlurHash" */,
+			);
+			productRefGroup = F5B89C6B2B1DD6C20008E28F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5B89C692B1DD6C20008E28F /* Hydra Vista */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5B89C682B1DD6C20008E28F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B89C762B1DD6C40008E28F /* Preview Assets.xcassets in Resources */,
+				F5B89C722B1DD6C40008E28F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5B89C662B1DD6C20008E28F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B0E87F2B24203500FF39A9 /* SearchView.swift in Sources */,
+				F5B0E8792B241E6E00FF39A9 /* SettingsView.swift in Sources */,
+				F533D2B52B2B01F400834D57 /* HydrusDataStructures.swift in Sources */,
+				F5B89C992B1F31120008E28F /* EntryDetailsView.swift in Sources */,
+				F5B89C852B1DDEAA0008E28F /* HydrusApi.swift in Sources */,
+				F5B89C702B1DD6C20008E28F /* ContentView.swift in Sources */,
+				F51BC83F2B274DCE00B07D92 /* EntryImageView.swift in Sources */,
+				F5B0E8812B24205900FF39A9 /* Autocomplete.swift in Sources */,
+				F51BC8412B277DFB00B07D92 /* EntryVideoView.swift in Sources */,
+				F5B89C6E2B1DD6C20008E28F /* Hydrus_ClientApp.swift in Sources */,
+				F5B89C872B1DE3AF0008E28F /* EntriesViewModel.swift in Sources */,
+				F5B0E87D2B241F4A00FF39A9 /* Entry.swift in Sources */,
+				F5B89C8B2B1DE8E10008E28F /* EntryView.swift in Sources */,
+				F5B0E87B2B241EB300FF39A9 /* Utils.swift in Sources */,
+				F5B0E8832B24218B00FF39A9 /* TagView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5B89C772B1DD6C40008E28F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5B89C782B1DD6C40008E28F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F5B89C7A2B1DD6C40008E28F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Hydra Vista/Hydra_Vista.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydra Vista/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hydra-Vista-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hydra Vista";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = konkrotte.hydravista;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5B89C7B2B1DD6C40008E28F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Hydra Vista/Hydra_Vista.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydra Vista/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hydra-Vista-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hydra Vista";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = konkrotte.hydravista;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5B89C652B1DD6C20008E28F /* Build configuration list for PBXProject "Hydra Vista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B89C772B1DD6C40008E28F /* Debug */,
+				F5B89C782B1DD6C40008E28F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B89C792B1DD6C40008E28F /* Build configuration list for PBXNativeTarget "Hydra Vista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B89C7A2B1DD6C40008E28F /* Debug */,
+				F5B89C7B2B1DD6C40008E28F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F51259E42B20BE69003F7EEC /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+		F51259EB2B21328D003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.9;
+			};
+		};
+		F51259EE2B213DB8003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager#installation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+		F5AE4ACD2B237A9800601AA5 /* XCRemoteSwiftPackageReference "UnifiedBlurHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iankoex/UnifiedBlurHash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F51259E52B20BE69003F7EEC /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F51259E42B20BE69003F7EEC /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		F51259E72B20BE69003F7EEC /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F51259E42B20BE69003F7EEC /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		F51259E92B20BE69003F7EEC /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F51259E42B20BE69003F7EEC /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		F51259EC2B21328E003F7EEC /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F51259EB2B21328D003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		F51259EF2B213DB8003F7EEC /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F51259EE2B213DB8003F7EEC /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+		F5AE4ACE2B237A9800601AA5 /* UnifiedBlurHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AE4ACD2B237A9800601AA5 /* XCRemoteSwiftPackageReference "UnifiedBlurHash" */;
+			productName = UnifiedBlurHash;
+		};
+		F5B89C8D2B1E070D0008E28F /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		F5B89C8F2B1E070D0008E28F /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		F5B89C912B1E070D0008E28F /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		F5B89C932B1E070D0008E28F /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5B89C8C2B1E070D0008E28F /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F5B89C622B1DD6C20008E28F /* Project object */;
+}
