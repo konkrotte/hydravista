@@ -130,7 +130,7 @@ private struct InspectorView: View {
                 }
                 
                 if let allKnownTagsService = entryVM.services.first(where: { $0.value.type == .AllKnownTags }) {
-                    TagSectionView(entryVM: entryVM, tags: entry.metadata.tags[allKnownTagsService.key]!.displayTags["0"]!, service: allKnownTagsService.value.name)
+                    TagSectionView(entryVM: entryVM, tags: entry.metadata.tags[allKnownTagsService.key]!.displayTags["0"] ?? [], service: allKnownTagsService.value.name)
                         .id(UUID())
                         .padding(.horizontal, 10)
                 }
