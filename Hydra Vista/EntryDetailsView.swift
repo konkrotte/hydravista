@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftUIPager
 
 // TODO: Implement other shapes
+// TODO: Use ActivityView on the button itself to indicate that it's working
 struct LikeDislikeRatingButton: View {
     @ObservedObject var entryVM: EntriesViewModel
     @State var rating: Bool?
@@ -23,14 +24,17 @@ struct LikeDislikeRatingButton: View {
     }
     
     var body: some View {
-        // FIXME: Does not update after pressing the button
         Button(action: {
             let newValue = newRating()
             
-            let srr = SetRatingRequest(hash: hash, ratingServiceKey: serviceKey, rating: newValue == nil ? RatingValue.null : RatingValue.boolean(newValue!), hydrusApiKey: nil)
+            let srr = SetRatingRequest(hash: hash, ratingServiceKey: serviceKey, rating: newValue == nil ? nil : RatingValue.boolean(newValue!), hydrusApiKey: nil)
             
             entryVM.setRatingWrapper(hash: hash, service: serviceKey, setRatingRequest: srr) { success in
                 entryVM.fetchMetadata(entryId: entryId)
+
+                if success {
+                    rating = newValue
+                }
             }
         }, label: {
             switch rating {
@@ -69,14 +73,16 @@ private struct InspectorView: View {
     var body: some View {
         ScrollView {
             LazyVStack {
+                // FIXME: Rating does not update when entry changes
                 let entry = entryVM.entries.values[pageIndex]
                 DisclosureGroup(isExpanded: $isRatingExpanded, content: {
-                    ForEach(Array(entry.metadata.ratings.keys), id: \.self) { key in
+                    ForEach(Array(entry.metadata.ratings.keys.sorted()), id: \.self) { key in
+                        let rating = entry.metadata.ratings[key]!?.booleanValue
                         HStack {
                             Text("\(entryVM.services[key]!.name)")
                             switch entryVM.services[key]!.type {
                             case .LikeDislikeRating:
-                                LikeDislikeRatingButton(entryVM: entryVM, rating: entry.metadata.ratings[key]!?.booleanValue, serviceKey: key, hash: entry.metadata.hash, entryId: entry.metadata.fileId)
+                                LikeDislikeRatingButton(entryVM: entryVM, rating: rating, serviceKey: key, hash: entry.metadata.hash, entryId: entry.metadata.fileId)
                             default:
                                 EmptyView()
                             }

@@ -133,7 +133,6 @@ struct Tags:Codable{
 enum RatingValue: Codable {
     case integer(Int)
     case boolean(Bool)
-    case null
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -158,9 +157,6 @@ enum RatingValue: Codable {
             try container.encode(x)
         case .boolean(let x):
             try container.encode(x)
-        case .null:
-            try container.encode(self)
-            break
         }
     }
     
@@ -168,8 +164,6 @@ enum RatingValue: Codable {
         switch self {
         case .integer(let s):
             return s
-        case .null:
-            return 0
         default:
             return 0
         }
@@ -181,8 +175,6 @@ enum RatingValue: Codable {
             return s
         case .integer(let s):
             return s == 1
-        default:
-            return false
         }
     }
 }
@@ -246,7 +238,7 @@ struct TagSearchResponse: Codable {
 struct SetRatingRequest: Codable {
     let hash: String
     let ratingServiceKey: String
-    let rating: RatingValue
+    let rating: RatingValue?
     let hydrusApiKey: String?
     
     enum CodingKeys: String, CodingKey {
@@ -254,5 +246,14 @@ struct SetRatingRequest: Codable {
         case ratingServiceKey = "rating_service_key"
         case rating
         case hydrusApiKey = "Hydrus-Client-API-Access-Key"
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(hash, forKey: .hash)
+        try container.encode(ratingServiceKey, forKey: .ratingServiceKey)
+        try container.encode(rating, forKey: .rating)
+        try container.encode(hydrusApiKey, forKey: .hydrusApiKey)
     }
 }
